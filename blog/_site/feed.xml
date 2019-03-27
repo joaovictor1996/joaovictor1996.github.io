@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>João Victor</title>
+    <description></description>
+    <link>joaovictor1996.github.io/</link>
+    <atom:link href="joaovictor1996.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 26 Mar 2019 21:19:25 -0300</pubDate>
+    <lastBuildDate>Tue, 26 Mar 2019 21:19:25 -0300</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Manipulando Pixels em uma Imagem</title>
+        <description>&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Projeto desenvolvido por &lt;a href=&quot;https://github.com/joaovictor1996&quot;&gt;João Victor&lt;/a&gt; e por &lt;a href=&quot;https://github.com/giovanna96&quot;&gt;Giovanna Severo&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;1-preenchendo-regiões&quot;&gt;1. Preenchendo Regiões&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;O objetivo do programa &lt;a href=&quot;../PDI/labeling/labeling.cpp&quot;&gt;labeling.cpp&lt;/a&gt; é contar quantas bolhas estão presentes na imagem, além de contar quantas possuem buracos. Para isso foram eliminadas todas as bolhas das bordas, já que não dá para saber ser elas possuem buracos. Em seguida foi utilizado a técnica de &lt;strong&gt;floodFill&lt;/strong&gt; para que auxiliasse no processo de contagem. O programa também está preparado para contar uma única vez as bolhas que possuem mais do que um buraco.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;title&quot;&gt;labeling.cpp&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;tok-n&quot;&gt;Unresolved&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;directive&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;tok-mi&quot;&gt;2019&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;tok-mo&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;tok-mi&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;Preenchendo&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;Regioes&lt;/span&gt;&lt;span class=&quot;tok-p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;adoc&lt;/span&gt; &lt;span class=&quot;tok-o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;tok-n&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;tok-p&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;PDI&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;labeling&lt;/span&gt;&lt;span class=&quot;tok-o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;labeling&lt;/span&gt;&lt;span class=&quot;tok-p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;tok-n&quot;&gt;cpp&lt;/span&gt;&lt;span class=&quot;tok-p&quot;&gt;[]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;E para compilar deve ser executado o seguinte comando no terminal:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;pygments highlight&quot;&gt;&lt;code data-lang=&quot;shell&quot;&gt;$ make labeling
+$ ./labeling &amp;lt;caminho_para_imagem&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;A baixo encontram-se as imagens de entrada e de saída:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;a class=&quot;image&quot; href=&quot;/PDI/labeling/bolhas2.png&quot;&gt;&lt;img src=&quot;/PDI/labeling/bolhas2.png&quot; alt=&quot;Imagem de entrada&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Figure 1. Imagem de Entrada&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;imageblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;a class=&quot;image&quot; href=&quot;/PDI/labeling/labeling.png&quot;&gt;&lt;img src=&quot;/PDI/labeling/labeling.png&quot; alt=&quot;Imagem de saída&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;title&quot;&gt;Figure 2. Imagem de Saída&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        <pubDate>Sun, 17 Mar 2019 00:00:00 -0300</pubDate>
+        <link>joaovictor1996.github.io/2019/03/17/Preenchendo-Regioes/</link>
+        <guid isPermaLink="true">joaovictor1996.github.io/2019/03/17/Preenchendo-Regioes/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

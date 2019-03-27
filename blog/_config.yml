@@ -1,0 +1,41 @@
+# Site settings
+title: "João Victor"
+email: joaovictordasilvacosta1996@gmail.com
+description: ""
+baseurl: ""
+url: "joaovictor1996.github.io"
+title_description: "Estudante de Engenharia de Computação na Universidade Federal do Rio Grande do Norte"
+title_image: "https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/21764766_1095469303920812_3986346872558082542_n.jpg?_nc_cat=108&_nc_ht=scontent.fnat2-1.fna&oh=984271d2c7221af1d20b8671d5a7f846&oe=5D114E47"
+google_analytics: ""
+disqus_account: 
+github_repository: 
+addthis_id:
+post_limit: 5
+
+# Social usernames/URLs
+twitter_username: 
+github_username:  joaovictor1996
+instagram_username: jvsc1996
+reddit_username: 
+linkedin_link: https://www.linkedin.com/in/joão-victor-costa-a95254150/
+google_plus_link: 
+stackoverflow_link: 
+xing_link:
+facebook_link: https://www.facebook.com/profile.php?id=100003732572970
+
+# Footer
+footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+exclude: [vendor]
+
+gems:
+- jekyll-asciidoc

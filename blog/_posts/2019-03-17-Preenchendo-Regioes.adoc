@@ -1,0 +1,32 @@
+:layout: post
+:source-highlighter: pygments
+= Manipulando Pixels em uma Imagem
+
+Projeto desenvolvido por https://github.com/joaovictor1996[João Victor] e por https://github.com/giovanna96[Giovanna Severo]
+
+== 1. Preenchendo Regiões
+
+O objetivo do programa link:../PDI/labeling/labeling.cpp[labeling.cpp] é contar quantas bolhas estão presentes na imagem, além de contar quantas possuem buracos. Para isso foram eliminadas todas as bolhas das bordas, já que não dá para saber ser elas possuem buracos. Em seguida foi utilizado a técnica de *floodFill* para que auxiliasse no processo de contagem. O programa também está preparado para contar uma única vez as bolhas que possuem mais do que um buraco.
+
+.labeling.cpp
+[source, c++]
+----
+include::../PDI/labeling/labeling.cpp[]
+----
+
+E para compilar deve ser executado o seguinte comando no terminal:
+
+[source, shell]
+----
+$ make labeling
+$ ./labeling <caminho_para_imagem>
+----
+
+A baixo encontram-se as imagens de entrada e de saída:
+
+[link=/PDI/labeling/bolhas2.png]
+image::/PDI/labeling/bolhas2.png[Imagem de entrada, title="Imagem de Entrada"]
+[link=/PDI/labeling/labeling.png] 
+image::/PDI/labeling/labeling.png[Imagem de saída, title="Imagem de Saída"]
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manipulando Pixels em uma Imagem</title>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/jquery.mmenu.all.css" />
+<link rel="stylesheet" href="/css/highlightjs.piperita.css">
+
+<!-- Favicons generated at http://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+</head>
+
+
+    <body>
+
+    <nav id="my-menu">
+  <div>
+    <p>João Victor</p>
+
+    <ul class="pages">
+      <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="/posts/"><i class="fa fa-archive"></i> All Posts</a></li>
+      <li><a href="/search/"><i class="fa fa-search"></i> Search</a></li>
+    </ul>
+
+    <p class="links">
+  
+  <a href="https://www.linkedin.com/in/joão-victor-costa-a95254150/" target="_new"><i class="fa fa-linkedin"></i></a>
+  
+  
+  <a href="https://www.facebook.com/profile.php?id=100003732572970" target="_new"><i class="fa fa-facebook"></i></a>
+  <a href="https://github.com/joaovictor1996" target="_new"><i class="fa fa-github-alt"></i></a>
+  
+  <a href="https://www.instagram.com/jvsc1996" target="_new"><i class="fa fa-instagram"></i></a>
+  
+  <a href="/feed.xml" target="_new"><i class="fa fa-rss"></i></a>
+</p>
+
+  </div>
+</nav>
+<div class="menu-button" href="#menu"><i class="fa fa-bars"></i></div>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      
+
+<div class="container-fluid single">
+  <div class="row">
+
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
+      
+
+      <h1 class="header" itemprop="name">Manipulando Pixels em uma Imagem</h1>
+
+      <div class="author">
+        <small><i>
+          
+          on <span itemprop="datePublished" content="2014-08-28">March 17, 2019</span>
+          
+        </i></small>
+      </div>
+
+      <div class="read-time">
+        <small>
+          1 minute read
+        </small>
+      </div>
+
+      <div class="content-panel content">
+
+        
+
+        <span itemprop="articleBody"><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Projeto desenvolvido por <a href="https://github.com/joaovictor1996">João Victor</a> e por <a href="https://github.com/giovanna96">Giovanna Severo</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="1-preenchendo-regiões">1. Preenchendo Regiões</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>O objetivo do programa <a href="../PDI/labeling/labeling.cpp">labeling.cpp</a> é contar quantas bolhas estão presentes na imagem, além de contar quantas possuem buracos. Para isso foram eliminadas todas as bolhas das bordas, já que não dá para saber ser elas possuem buracos. Em seguida foi utilizado a técnica de <strong>floodFill</strong> para que auxiliasse no processo de contagem. O programa também está preparado para contar uma única vez as bolhas que possuem mais do que um buraco.</p>
+</div>
+<div class="listingblock">
+<div class="title">labeling.cpp</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c++"><span class="tok-n">Unresolved</span> <span class="tok-n">directive</span> <span class="tok-n">in</span> <span class="tok-mi">2019</span><span class="tok-o">-</span><span class="tok-mo">03</span><span class="tok-o">-</span><span class="tok-mi">17</span><span class="tok-o">-</span><span class="tok-n">Preenchendo</span><span class="tok-o">-</span><span class="tok-n">Regioes</span><span class="tok-p">.</span><span class="tok-n">adoc</span> <span class="tok-o">-</span> <span class="tok-n">include</span><span class="tok-o">::</span><span class="tok-p">..</span><span class="tok-o">/</span><span class="tok-n">PDI</span><span class="tok-o">/</span><span class="tok-n">labeling</span><span class="tok-o">/</span><span class="tok-n">labeling</span><span class="tok-p">.</span><span class="tok-n">cpp</span><span class="tok-p">[]</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>E para compilar deve ser executado o seguinte comando no terminal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="shell">$ make labeling
+$ ./labeling &lt;caminho_para_imagem&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A baixo encontram-se as imagens de entrada e de saída:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="/PDI/labeling/bolhas2.png"><img src="/PDI/labeling/bolhas2.png" alt="Imagem de entrada"></a>
+</div>
+<div class="title">Figure 1. Imagem de Entrada</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="/PDI/labeling/labeling.png"><img src="/PDI/labeling/labeling.png" alt="Imagem de saída"></a>
+</div>
+<div class="title">Figure 2. Imagem de Saída</div>
+</div>
+</div>
+</div></span>
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+
+      
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="footer clearfix">
+  <div class="col-md-6">
+    Made with <i class="fa fa-heart"></i> by <a href="https://twitter.com/_JacobTomlinson">Jacob Tomlinson</a>
+  </div>
+  <div class="col-md-6">
+    &lt;/&gt; on <a href="https://github.com/jacobtomlinson/carte-noire">Github</a> &nbsp;<i class="fa fa-github-alt"></i>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/js/jquery.mmenu.min.all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $("#my-menu").mmenu().on( "closed.mm", function() {
+            $(".menu-button").show();
+         });
+      $(".menu-button").click(function() {
+        $(".menu-button").hide();
+        $("#my-menu").trigger("open.mm");
+      });
+   });
+</script>
+
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '']);
+          _gaq.push(['_trackPageview']);
+  (function () {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+    </body>
+</html>
