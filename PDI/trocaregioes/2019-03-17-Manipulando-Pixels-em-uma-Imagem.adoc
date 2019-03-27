@@ -1,0 +1,54 @@
+:source-highlighter: pygments
+= Manipulando Pixels em uma Imagem
+
+Projeto desenvolvido por https://github.com/joaovictor1996[João Victor] e por https://github.com/giovanna96[Giovanna Severo]
+
+== 1. Transformando uma região da em imagem em negativo
+
+O objetivo do programa link:../PDI/regions/regions.cpp[regions.cpp] é transformar uma área da imagem, informada pelo usuário, em negativo, ou seja, subtrai 255 de cada valor do pixel que está dentro da área. Para isso o usuaŕio deve informar os valores de X1, Y1, X2 e Y2, em seguida a área é percorrida transformando cada pixel no negativo dele.
+
+.regions.cpp
+[source, c++]
+----
+include::../PDI/regions/regions.cpp[]
+----
+
+E para compilar deve ser executado o seguinte comando no terminal:
+
+[source, shell]
+----
+$ make regions
+$ ./regions <caminho_para_imagem>
+----
+
+A baixo encontram-se as imagens de entrada e de saída:
+
+[link=/PDI/regions/biel.png]
+image::/PDI/regions/biel.png[Imagem de entrada, title="Imagem de Entrada"]
+[link=/PDI/regions/regions.png] 
+image::/PDI/regions/regions.png[Imagem de saída, title="Imagem de Saída"]
+
+== 2. Troca de regiões
+
+O objetivo do programa link:../PDI/trocaregioes/trocaregioes.cpp[trocaregioes.cpp] é fazer com que os quadrantes sejam trocados. Para isso foi feito uma cópia da imagem enviada para o programa e em seguida cada pixel da imagem original foi transferido para a cópia de forma que os quadrantes fossem trocados.
+
+.trocaregioes.cpp
+[source, c++]
+----
+include::../PDI/trocaregioes/trocaregioes.cpp[]
+----
+
+Para compilar podem ser usados comandos semelhantes ao programa anterior:
+
+[source, shell]
+----
+$ make trocaregioes
+$ ./trocaregioes <caminho_para_imagem>
+----
+
+A baixo encontram-se as imagens de entrada e de saída:
+
+[link=/PDI/trocaregioes/biel.png]
+image::/PDI/trocaregioes/biel.png[Imagem de entrada, title="Imagem de Entrada"]
+[link=/PDI/trocaregioes/trocaregioes.png] 
+image::/PDI/trocaregioes/trocaregioes.png[Imagem de saída, title="Imagem de Saída"]
