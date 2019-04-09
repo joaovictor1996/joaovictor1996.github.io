@@ -84,6 +84,7 @@ int main(int argvc, char** argv){
     }
     frameFiltered.convertTo(result, CV_8U);
     imshow("filtroespacial", result);
+    imwrite("laplgauss.png",result);
     key = (char) waitKey(10);
     if( key == 27 ) break; // esc pressed!
     switch(key){
