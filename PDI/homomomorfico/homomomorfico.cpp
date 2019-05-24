@@ -92,8 +92,8 @@ void on_trackbar_hom(int, void*){
 	float d2;
   for(int i=0; i<dft_M; i++){
     for(int j=0; j<dft_N; j++){
-				d2 = (i-dft_M/2)*(i-dft_M/2)+(j-dft_N/2)*(j-dft_N/2);
-				tmp.at<float>(i,j) = (gama_h-gama_l)*(1.0-(float)exp(-(c*d2/(d*d))))+gama_l;
+				d2 = (i-dft_M/2)*(i-dft_M/2)+(j-dft_N/2)*(j-dft_N/2);//calculo da distancia
+				tmp.at<float>(i,j) = (gama_h-gama_l)*(1.0-(float)exp(-(c*d2/(d*d))))+gama_l;//função que gera o filtro
     }
   }
 
@@ -103,7 +103,6 @@ void on_trackbar_hom(int, void*){
   merge(comps, 2, filter);
 
   cvtColor(image, imagegray, CV_BGR2GRAY);
-  imshow("original", imagegray);
 
   // realiza o padding da imagem
   copyMakeBorder(imagegray, padded, 0,
@@ -157,34 +156,34 @@ void on_trackbar_hom(int, void*){
 
   // normaliza a parte real para exibicao
   normalize(planos[0], planos[0], 0, 1, CV_MINMAX);
-  imshow("filtrada", planos[0]);
+  imshow("imagem", planos[0]);
 }
-
+//criação dos sliders
 int main(int , char**){
 
 	int max = 100;
 	char TrackbarName[50];
 
-  namedWindow("filtrada", 1);
+  namedWindow("imagem", 1);
  
   sprintf( TrackbarName, "gama_h %d", max );
-  createTrackbar( TrackbarName, "filtrada",
+  createTrackbar( TrackbarName, "imagem",
 				  &gama_h_slider,
 				  max,
 				  on_trackbar_hom );
 
   sprintf( TrackbarName, "gama_l %d", max );
-  createTrackbar( TrackbarName, "filtrada",
+  createTrackbar( TrackbarName, "imagem",
 				  &gama_l_slider,
 				  max,
 				  on_trackbar_hom );
   sprintf( TrackbarName, "c %d", max );
-  createTrackbar( TrackbarName, "filtrada",
+  createTrackbar( TrackbarName, "imagem",
 				  &c_slider,
 				  max,
 				  on_trackbar_hom );
   sprintf( TrackbarName, "d %d", max );
-  createTrackbar( TrackbarName, "filtrada",
+  createTrackbar( TrackbarName, "imagem",
 				  &d_slider,
 				  max,
 				  on_trackbar_hom );
