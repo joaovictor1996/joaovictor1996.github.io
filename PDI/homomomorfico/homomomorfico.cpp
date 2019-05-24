@@ -103,6 +103,7 @@ void on_trackbar_hom(int, void*){
   merge(comps, 2, filter);
 
   cvtColor(image, imagegray, CV_BGR2GRAY);
+  imshow("original", imagegray);
 
   // realiza o padding da imagem
   copyMakeBorder(imagegray, padded, 0,
